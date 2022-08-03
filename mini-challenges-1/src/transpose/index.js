@@ -5,19 +5,19 @@
  * @returns {number[]} The transposed array
  */
 function transpose(array) {
-    let rowNum = array[0].length;
-    let colNum = array.length;
+  let rowNum = array[0].length;
+  let colNum = array.length;
 
-    const outterArray = [];
-    for (let row = 0; row < rowNum; row++) {
-        let innerArray = []
-        for (let col = 0; col < colNum; col++) {
-            // Inner loop that takes the nth(row) of each columns 
-            innerArray.push(array[col][row])
-        }
-        outterArray.push(innerArray)
+  const outerArray = [];
+  for (let row = 0; row < rowNum; row++) {
+    let innerArray = [];
+    for (let col = 0; col < colNum; col++) {
+      // Inner loop that takes the nth(row) of each columns
+      innerArray.push(array[col][row]);
     }
-    return outterArray
+    outerArray.push(innerArray);
+  }
+  return outerArray;
 }
 
 module.exports = transpose;
